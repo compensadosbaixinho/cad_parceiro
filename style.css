@@ -1,0 +1,158 @@
+body {
+  background-color: orange;
+  font-family: Arial;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.container {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #1E90FF;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;  /* você pode ajustar este valor para o máximo que desejar */
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0cf;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover:before {
+  width: 100%;
+}
+
+#name {
+  width: 40ch;
+}
+
+#cpf_number {
+  width: 30ch;
+}
+
+#cnpj_number {
+  width: 30ch;
+}
+
+#ie {
+  width: 30ch;
+}
+  
+#cep {
+  width: 13ch;
+}
+
+#street {
+  width: 40ch;
+}
+
+#number {
+  width: 10ch;
+}
+
+#complement {
+  width: 30ch;
+}
+
+#district {
+  width: 30ch;
+}
+
+#city {
+  width: 30ch;
+}
+
+#phone {
+  width: 16ch;
+}
+
+#mobile {
+  width: 16ch;
+}
+
+#email {
+	width: 40ch;
+}
+
+#fornecedor {
+  width: 30ch;
+  height: 6em; /* para 3 linhas de texto */
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    background-color: orange;
+  }
+
+  .container {
+    min-height: 100vh; 
+    padding: 1rem; 
+    box-shadow: none;
+    border-radius: 10px;
+    max-width: 100%;
+    width: calc(100% - 2 * 1rem); 
+    margin: 0.5rem auto;
+    background-color: #1E90FF;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;  
+  }
+
+  .form-control {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;  
+  }
+
+  .button {
+    padding: .5rem 1rem;
+    font-size: .875rem;
+  }
+}
