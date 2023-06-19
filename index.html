@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Cadastro de Clientes</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compensados Baixinho</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="container">
-    <h1 class="text-center mt-4">Cadastro de Clientes</h1>
-
+    <nav class="navbar navbar-expand-lg navbar-light my-navbar">
+        <a class="navbar-brand" href="#">Compensados Baixinho</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://compensadosbaixinho.github.io/cad_parceiro">Vendas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://compensadosbaixinho.github.io/cad_cliente_rep/">Representantes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <div class="header-section">
+      <h1 class="text-center mt-4">Cadastro de Clientes</h1>
+      <br/>
+      <div class="d-flex justify-content-center my-0">
+       <img src="img2.png" class="img-fluid img-custom mb-0"><br/>
+      </div>
+    </div>
     <form id="client-form" class="mx-auto mt-5" style="max-width: 600px;">
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="name">Nome completo:</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="cpf_cnpj" id="cpf" value="cpf" required>
-        <label class="form-check-label" for="cpf">CPF</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="cpf_cnpj" id="cnpj" value="cnpj" required>
-        <label class="form-check-label" for="cnpj">CNPJ</label>
-      </div>
+        <input type="text" class="form-control mx-auto" id="name" name="name" required>
       </div>
 
-      <div class="form-group" id="cpf_field" style="display: none;">
+      <div class="form-group text-center">
+        <div class="d-flex justify-content-center">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="cpf_cnpj" id="cpf" value="cpf" required>
+            <label class="form-check-label" for="cpf">CPF</label>
+          </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="cpf_cnpj" id="cnpj" value="cnpj" required>
+            <label class="form-check-label" for="cnpj">CNPJ</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group text-center" id="cpf_field" style="display: none;">
         <label for="cpf_number">CPF:</label>
-        <input type="text" class="form-control" id="cpf_number" name="cpf_number">
+        <input type="text" class="form-control mx-auto" id="cpf_number" name="cpf_number">
       </div>
 
-      <div class="form-group" id="cnpj_field" style="display: none;">
+      <div class="form-group text-center" id="cnpj_field" style="display: none;">
         <label for="cnpj_number">CNPJ:</label>
-        <input type="text" class="form-control" id="cnpj_number" name="cnpj_number">
+        <input type="text" class="form-control mx-auto" id="cnpj_number" name="cnpj_number">
       </div>
 
-      <div id="optional_fields" style="display: none;" class="form-group">
-        <label for="ie">IE:</label>
-        <input type="text" id="ie" name="ie" class="form-control">
+      <div id="optional_fields" style="display: none;" class="form-group text-center">
+        <label for="ie">Inscrição Estadual:</label>
+        <input type="text" id="ie" name="ie" class="form-control mx-auto">
 
         <label for="produtor_rural" class="mt-3">Produtor rural:</label><br>
         <div class="form-check form-check-inline">
@@ -53,58 +83,66 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="cep">Cep:</label>
-        <input type="text" class="form-control" id="cep" name="cep" required>
+        <input type="text" class="form-control mx-auto" id="cep" name="cep" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="street">Rua:</label>
-        <input type="text" class="form-control" id="street" name="street" required>
+        <input type="text" class="form-control mx-auto" id="street" name="street" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
           <label for="number">Número:</label>
-          <input type="number" min="0" class="form-control" id="number" name="number" required>
+          <input type="number" min="0" class="form-control mx-auto" id="number" name="number" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="complement">Complemento:</label>
-        <input type="text" class="form-control" id="complement" name="complement" required>
+        <input type="text" class="form-control mx-auto" id="complement" name="complement">
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="district">Bairro:</label>
-        <input type="text" class="form-control" id="district" name="district" required>
+        <input type="text" class="form-control mx-auto" id="district" name="district" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="city">Cidade:</label>
-        <input type="text" class="form-control" id="city" name="city" required>
+        <input type="text" class="form-control mx-auto" id="city" name="city" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="phone">Telefone:</label>
-        <input type="text" class="form-control" id="phone" name="phone">
+        <input type="text" class="form-control mx-auto" id="phone" name="phone">
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="mobile">Celular:</label>
-        <input type="text" class="form-control" id="mobile" name="mobile" required>
+        <input type="text" class="form-control mx-auto" id="mobile" name="mobile" required>
       </div>
       
-      <div class="form-group">
+      <div class="form-group text-center">
         <label for="email">E-mail:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <input type="email" class="form-control mx-auto" id="email" name="email" required>
       </div>
-
-      <div class="form-group">
-        <label for="fornecedor">Digite ao menos 3 fornecedores de sua preferência:</label> <br>
-        <textarea class="form-control" id="fornecedor" name="fornecedor" rows="3" required></textarea>
+        <br/>
+      <div class="form-group text-center">
+        <label for="fornecedor">Conta pra gente algumas<br/>marcas que você quer encontrar:</label><br/><br/>
+        <textarea class="form-control mx-auto" id="fornecedor" name="fornecedor" rows="3" required></textarea>
     </div>
-    <br>
+    <br/>
     <button type="submit" class="button mt-3">Enviar</button>
+    <br/>
   </div>
-  <script src="script.js"></script>
+
+<footer class="footer">
+    <div class="container-fluid text-white text-center py-3">
+        <p>Compensados Baixinho © - 2023 Todos os direitos reservados<br>
+    </div>
+</footer>
+  <script src="script.js"></script> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

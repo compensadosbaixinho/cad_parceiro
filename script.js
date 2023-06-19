@@ -1,5 +1,5 @@
-
 $(document).ready(function() {
+  
   $('#number').on('input', function() {
     this.value = Math.abs(this.value);
   });
@@ -44,7 +44,7 @@ $(document).ready(function() {
     var email = $('#email').val();
     var fornecedor = $('#fornecedor').val();
 
-    var formattedMessage = `Olá, meu nome é ${name}. Cpf/Cnpj: ${cpfCnpjNumber}, IE: ${ie}, Produtor Rural: ${produtorRural}, Cep: ${cep}, Rua: ${street}, Número: ${number}, Complemento: ${complement}, Bairro: ${district}, Cidade: ${city}, Telefone: ${phone}, Celular: ${mobile}, Fornecedor: ${fornecedor}, E-mail: ${email}`;
+    var formattedMessage = `Olá, quero fazer meu cadastro na loja, meu nome é ${name}. \nCpf/Cnpj: ${cpfCnpjNumber},\nIE:${ie},\nProdutor Rural: ${produtorRural},\nCep: ${cep},\n${street},\nNúmero: ${number},\nComplemento: ${complement},\nBairro: ${district},\nCidade: ${city},\nTelefone: ${phone},\nCelular: ${mobile},\nFornecedor: ${fornecedor},\nE-mail: ${email}`;
 
     var phoneNumber = '5519996438475';
     var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(formattedMessage);
