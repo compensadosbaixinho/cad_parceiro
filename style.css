@@ -101,6 +101,11 @@ h1 {
   z-index: -2;
 }
 
+
+fieldset{
+background-color: #1E90FF;
+border-radius: 10px
+}
 .button:hover {
   color: rgb(0, 0, 0);
 }
@@ -114,6 +119,10 @@ h1 {
 }
 
 #cpf_number {
+  width: 40ch;
+}
+
+#rg_number {
   width: 40ch;
 }
 
@@ -146,6 +155,30 @@ h1 {
 }
 
 #city {
+  width: 40ch;
+}
+
+#cep2 {
+  width: 20ch;
+}
+
+#street2 {
+  width: 40ch;
+}
+
+#number2 {
+  width: 15ch;
+}
+
+#complement2 {
+  width: 40ch;
+}
+
+#district2 {
+  width: 40ch;
+}
+
+#city2 {
   width: 40ch;
 }
 

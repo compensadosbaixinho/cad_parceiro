@@ -8,7 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light my-navbar">
@@ -19,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://compensadosbaixinho.github.io/pagseguro">PagSeguro</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://compensadosbaixinho.github.io/cad_parceiro">Vendas</a>
@@ -32,18 +31,18 @@
     </nav>
 <div class="container">
     <div class="header-section">
-      <h1 class="text-center mt-4">Cadastro de Clientes</h1>
+      <h1 class="text-center mt-4">Cadastro de Clientes</h1><br/>
       <br/>
       <div class="d-flex justify-content-center my-0">
        <img src="img2.png" class="img-fluid img-custom mb-0"><br/>
       </div>
     </div>
+
     <form id="client-form" class="mx-auto mt-5" style="max-width: 600px;">
       <div class="form-group text-center">
         <label for="name">Nome completo:</label>
         <input type="text" class="form-control mx-auto" id="name" name="name" required>
       </div>
-
       <div class="form-group text-center">
         <div class="d-flex justify-content-center">
           <div class="form-check form-check-inline">
@@ -57,7 +56,6 @@
         </div>
       </div>
 
-
       <div class="form-group text-center" id="cpf_field" style="display: none;">
         <label for="cpf_number">CPF:</label>
         <input type="text" class="form-control mx-auto" id="cpf_number" name="cpf_number">
@@ -67,6 +65,11 @@
         <label for="cnpj_number">CNPJ:</label>
         <input type="text" class="form-control mx-auto" id="cnpj_number" name="cnpj_number">
       </div>
+
+      <div class="form-group text-center" id="rg_field" style="display: none;">
+        <label for="rg_number">RG:</label>
+        <input type="text" class="form-control mx-auto" id="rg_number" name="rg_number" maxlength="18">
+      </div>      
 
       <div id="optional_fields" style="display: none;" class="form-group text-center">
         <label for="ie">Inscrição Estadual:</label>
@@ -83,13 +86,14 @@
         </div>
       </div>
 
+      <fieldset>
       <div class="form-group text-center">
-        <label for="cep">Cep:</label>
+        <label for="cep"><br/>Endereço Pessoal: <br/><br/>Cep:</label>
         <input type="text" class="form-control mx-auto" id="cep" name="cep" required>
       </div>
 
       <div class="form-group text-center">
-        <label for="street">Rua:</label>
+        <label for="street">Rua (ou Avenida):</label>
         <input type="text" class="form-control mx-auto" id="street" name="street" required>
       </div>
 
@@ -112,7 +116,49 @@
         <label for="city">Cidade:</label>
         <input type="text" class="form-control mx-auto" id="city" name="city" required>
       </div>
+      <div class="form-group text-center">
+        <input type="checkbox" id="sec_address_check" name="sec_address_check">
+        <label for="sec_address_check"><br/>Seu endereço de entrega é diferente?</label>
+      </div>
+    </fieldset>
+    <br/>
+    <div id="sec_address" style="display: none;">
+      <fieldset>
+        <div class="form-group text-center">
+          <label for="cep"><br/>Endereço de Entrega: <br/><br/>Cep:</label>
+          <input type="text" class="form-control mx-auto" id="cep2" name="cep2">
+        </div>
+  
+        <div class="form-group text-center">
+          <label for="street">Rua (ou Avenida):</label>
+          <input type="text" class="form-control mx-auto" id="street2" name="street2">
+        </div>
 
+        <div class="form-group text-center">
+            <label for="number">Número:</label>
+            <input type="number" min="0" class="form-control mx-auto" id="number2" name="number2">
+        </div>
+  
+        <div class="form-group text-center">
+          <label for="complement">Complemento:</label>
+          <input type="text" class="form-control mx-auto" id="complement2" name="complement2">
+        </div>
+  
+        <div class="form-group text-center">
+          <label for="district">Bairro:</label>
+          <input type="text" class="form-control mx-auto" id="district2" name="district2">
+        </div>
+  
+        <div class="form-group text-center">
+          <label for="city">Cidade:</label>
+          <input type="text" class="form-control mx-auto" id="city2" name="city2">
+        </div>
+        <br/>
+      </fieldset>
+      <br/>
+    </div>
+      
+    </fieldset>
       <div class="form-group text-center">
         <label for="phone">Telefone:</label>
         <input type="text" class="form-control mx-auto" id="phone" name="phone">
@@ -129,7 +175,7 @@
       </div>
         <br/>
       <div class="form-group text-center">
-        <label for="fornecedor">Conta pra gente algumas<br/>marcas que você quer encontrar:</label><br/><br/>
+        <label for="fornecedor">Agora nos informe, por favor,<br/> 3 referências comerciais:</label><br/>
         <textarea class="form-control mx-auto" id="fornecedor" name="fornecedor" rows="3" required></textarea>
     </div>
     <br/>
