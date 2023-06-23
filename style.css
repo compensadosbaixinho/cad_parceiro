@@ -249,5 +249,51 @@ border-radius: 10px
   width: 100%;
   margin: 0;
 }
-
+#cep {
+  width: 20ch;
 }
+
+#street {
+  width: 35ch;
+}
+
+#number {
+  width: 15ch;
+}
+
+#complement {
+  width: 35ch;
+}
+
+#district {
+  width: 35ch;
+}
+
+#city {
+  width: 35ch;
+}
+
+#cep2 {
+  width: 20ch;
+}
+
+#street2 {
+  width: 35ch;
+}
+
+#number2 {
+  width: 15ch;
+}
+
+#complement2 {
+  width: 35ch;
+}
+
+#district2 {
+  width: 35ch;
+}
+
+#city2 {
+  width: 35ch;
+}
+
