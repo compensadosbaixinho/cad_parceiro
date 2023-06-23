@@ -139,7 +139,7 @@ border-radius: 10px
 }
 
 #street {
-  width: 40ch;
+  width: 38ch;
 }
 
 #number {
@@ -147,15 +147,15 @@ border-radius: 10px
 }
 
 #complement {
-  width: 40ch;
+  width: 38ch;
 }
 
 #district {
-  width: 40ch;
+  width: 38ch;
 }
 
 #city {
-  width: 40ch;
+  width: 38ch;
 }
 
 #cep2 {
@@ -163,7 +163,7 @@ border-radius: 10px
 }
 
 #street2 {
-  width: 40ch;
+  width: 38ch;
 }
 
 #number2 {
@@ -171,15 +171,15 @@ border-radius: 10px
 }
 
 #complement2 {
-  width: 40ch;
+  width: 38ch;
 }
 
 #district2 {
-  width: 40ch;
+  width: 38ch;
 }
 
 #city2 {
-  width: 40ch;
+  width: 38ch;
 }
 
 #phone {
