@@ -24,11 +24,12 @@ $(document).ready(function() {
 
 $('#sec_address_check').change(function() {
   if(this.checked) {
-    $('#sec_address').show();
+    $('#sec_address').slideDown();
   } else {
-    $('#sec_address').hide();
+    $('#sec_address').slideUp();
   }
 });
+
 
   $('input[type=radio][name=cpf_cnpj]').change(function() {
     if (this.value == 'cpf') {
