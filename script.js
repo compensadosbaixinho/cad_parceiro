@@ -84,10 +84,11 @@ $('#sec_address_check').change(function() {
     var phone = removeAccents($('#phone').val().toUpperCase());
     var mobile = removeAccents($('#mobile').val().toUpperCase());
     var email = removeAccents($('#email').val());
+    var vendedor = removeAccents($('#vendedor').val());
     var fornecedor = removeAccents($('#fornecedor').val().toUpperCase());
     
 
-    var formattedMessage = `Olá, quero fazer meu cadastro na loja, meu nome é ${name}. \nCpf/Cnpj: ${cpfCnpjNumber},\nRG: ${rgNumber},\nIE:${ie},\nProdutor Rural: ${produtorRural},\nCep: ${cep},\n${street},\nNúmero: ${number},\nComplemento: ${complement},\nBairro: ${district},\nCidade: ${city},\nTelefone: ${phone},\nCelular: ${mobile},\nReferências: ${fornecedor},\nE-mail: ${email}`;
+    var formattedMessage = `Olá, quero fazer meu cadastro na loja, meu nome é ${name}. \nCpf/Cnpj: ${cpfCnpjNumber},\nRG: ${rgNumber},\nIE:${ie},\nProdutor Rural: ${produtorRural},\nCep: ${cep},\n${street},\nNúmero: ${number},\nComplemento: ${complement},\nBairro: ${district},\nCidade: ${city},\nTelefone: ${phone},\nCelular: ${mobile},\nReferências: ${fornecedor},\nE-mail: ${email},\nVendedor: ${vendedor}`;
 
     if(secAddressCheck) {
       formattedMessage += `\nPossuo um endereço de entrega secundário: \nCep: ${cep2},\nRua: ${street2},\nNúmero: ${number2},\nComplemento: ${complement2},\nBairro: ${district2},\nCidade: ${city2}`;

@@ -206,6 +206,10 @@ input[type='checkbox'] {
   height: 6em; 
 }
 
+#vendedor {
+  width: 18ch;
+}
+
 @media (max-width: 767px) {
   body {
     margin: 0;
