@@ -94,7 +94,7 @@ $('#sec_address_check').change(function() {
       formattedMessage += `\nPossuo um endereço de entrega secundário: \nCep: ${cep2},\nRua: ${street2},\nNúmero: ${number2},\nComplemento: ${complement2},\nBairro: ${district2},\nCidade: ${city2}`;
     }
     
-    var phoneNumber = '5519998337623';
+    var phoneNumber = '5519997227991';
     var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(formattedMessage);
     window.location.href = url;
   });
